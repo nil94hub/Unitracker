@@ -288,7 +288,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         pickup_location.setText(origin_address);
                         fetchcurrentloc=0;
                     }
-                    String add = "";
+                  //  String add = "";
                     if (addresses.size() > 0) {
                         System.out.println(addresses.get(0).getLocality());
                        // pickup_location.setText(origin_address);
