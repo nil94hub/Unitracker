@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Unitracker</string>
+    <string name="title_activity_maps">Unitracker</string>
+    <string name="mapboxkey">pk.eyJ1IjoiaWNhbnN0dWRpb3oiLCJhIjoiY2oyMXQ3dGRpMDAwdDJ3bXpmZHRkdTBtNyJ9.PxslIcrVRj_gVgiv-Y-jog</string>
+</resources>

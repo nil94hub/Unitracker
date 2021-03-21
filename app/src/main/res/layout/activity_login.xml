@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#000"
+
+    android:layout_height="match_parent">
+
+
+   <!-- <ImageViewma
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:id="@+id/panic"
+        android:src="@drawable/sendmsgbutton"></ImageView>-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_weight="3">
+    <ImageView
+        android:layout_width="89dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon"></ImageView>
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="UniTracker"></TextView>
+</LinearLayout>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:textColor="#546"
+                android:text=""></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/header"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_weight="2"
+                    android:layout_height="50dp">
+                    <com.hbb20.CountryCodePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:ccp_defaultNameCode='US'
+                        android:id="@+id/ccp"
+                    app:ccp_textSize="12sp"
+                    app:ccp_arrowSize="20dp"
+                    app:ccp_countryPreference="US,NZ"
+                    app:ccp_textGravity="RIGHT"
+                    app:ccp_showNameCode="false"
+                        app:ccp_arrowColor="#fff"
+                        app:ccp_contentColor="#fff"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="false"
+                    app:ccp_clickable="true"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                    app:ccp_autoDetectLanguage="true"
+                    app:ccp_defaultLanguage="FRENCH"/>
+            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="50dp"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="Mobile number"
+                            android:maxLength="12"
+                            android:inputType="number"
+                            android:id="@+id/etMobile"
+                            android:textColor="#fff"
+                            android:textColorHint="#737373"
+                            />
+                    </LinearLayout>
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.6"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_person_add_black_24dp"
+                            android:textColor="#000"
+                            android:clickable="true"
+                            android:id="@+id/btnFetch"
+                            android:layout_height="wrap_content"></ImageView>
+                    </LinearLayout>-->
+                </LinearLayout>
+
+            </LinearLayout>
+        <!--    <TextView
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:textSize="18dp"
+                android:textColor="#546"
+                android:text="Enter the mobile number you want to track"></TextView>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/header"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_weight="2"
+                        android:layout_height="50dp">
+                        <com.hbb20.CountryCodePicker
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:ccp_defaultNameCode='US'
+                            android:id="@+id/ccpuser"
+                            app:ccp_textSize="12sp"
+                            app:ccp_contentColor="#fff"
+                            app:ccp_arrowSize="20dp"
+                            app:ccp_countryPreference="US,NZ"
+                            app:ccp_textGravity="RIGHT"
+                            app:ccp_showNameCode="false"
+                            app:ccp_showFlag="true"
+                            app:ccp_showFullName="false"
+                            app:ccp_clickable="true"
+                            app:ccp_showPhoneCode="true"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                            app:ccp_autoDetectLanguage="true"
+                            app:ccp_defaultLanguage="FRENCH"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="50dp"
+
+                        >
+                        <EditText
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="Tracking Number"
+                            android:maxLength="14"
+                            android:inputType="number"
+                            android:id="@+id/etUserMobile"
+                            android:textColor="#fff"
+                            android:textColorHint="#737373"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.6"
+
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_person_add_black_24dp"
+                            android:textColor="#000"
+                            android:clickable="true"
+                            android:id="@+id/btnFetch"
+                            android:layout_height="wrap_content"></ImageView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--    <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/radio_d1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John" >
+                    </RadioButton>
+                    <RadioButton
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/radio_d2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Herbert"
+                        />
+                    <RadioButton
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/radio_d3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Louis" />
+                </RadioGroup>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+               <Button
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:id="@+id/btnAddcnct"
+                   android:background="#fff"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Buddy Navigation"></Button>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/tv1"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/tv2"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/btncruise"
+                    android:background="#fff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cruise"></Button>
+
+
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llsnackbar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_height="0dp">
+                   <!-- <Button
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1.5dp"
+                        android:layout_marginRight="1.5dp"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Proceed"
+                        android:textColor="#fff"
+                        android:backgroundTint="#593796"
+                        android:background="#673AB7"
+                        android:id="@+id/btnSubmit"></Button>-->
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Designed by Niladri"
+                        android:padding="5dp"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"></TextView>
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

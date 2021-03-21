@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="match_parent">
+
+ <!--   <ImageView
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@drawable/track"></ImageView>-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refreshotp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="3">
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="50dp"
+                android:layout_height="match_parent"
+                android:text="UniTracker"></TextView>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="bottom"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:text="Please wait while we fetch your OTP"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/header"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="50dp"
+
+                        >
+                        <EditText
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="OTP"
+                            android:cursorVisible="false"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:id="@+id/etOTP"
+                            android:textColor="#fff"
+                            android:textColorHint="#737373"
+                            />
+                    </LinearLayout>
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.6"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_person_add_black_24dp"
+                            android:textColor="#000"
+                            android:clickable="true"
+                            android:id="@+id/btnFetch"
+                            android:layout_height="wrap_content"></ImageView>
+                    </LinearLayout>-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+              &lt;!&ndash;  <Button
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1.5dp"
+                    android:layout_marginRight="1.5dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Proceed"
+                    android:textColor="#fff"
+                    android:backgroundTint="#593796"
+                    android:background="#673AB7"
+                    android:id="@+id/btnOtpSubmit"></Button>&ndash;&gt;
+            </LinearLayout>-->
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
